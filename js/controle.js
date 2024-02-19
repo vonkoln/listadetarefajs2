@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+let contador = 0
 let input = document.getElementById('InputTarefa');
 let btnAdd = document.getElementById('btn-add');
 let main = document.getElementById('areaLista');
@@ -8,7 +10,9 @@ function addTarefa() {
 
     //Se não for vazio, nem nulo, nem indefinido
     if((valorInput !== "") && (valorInput !== null) && (valorInput !== undefined)) {
-        let novoItem = `<div class="item">
+       ++contador
+       
+        let novoItem = `<div id="${contador}" class="item">
         <div class="item-icone">
         <ion-icon name="ellipse-outline"></ion-icon>
          </div>
@@ -16,7 +20,7 @@ function addTarefa() {
           ${valorInput}
           </div>
           <div class="item-botao">
-          <button class="delete" ><ion-icon name="trash-outline"></ion-icon> Deletar</button>
+          <button onclick="deletar()" class="delete" ><ion-icon name="trash-outline"></ion-icon> Deletar</button>
            </div>
             </div>`;
 
@@ -37,3 +41,4 @@ input.addEventListener("keyup", function(event){
         btnAdd.click();
     }
 })
+}) 
