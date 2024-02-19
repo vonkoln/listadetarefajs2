@@ -48,7 +48,7 @@ main
     flex-flow: row wrap;
     width: 90%;
     margin: auto auto;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     padding-top: 40px;
 }
 .item
@@ -62,6 +62,15 @@ main
     width: 100%;
     box-shadow: 0 0 20px #ccc;
     margin-bottom: 2%;
+}
+.item.clicado
+{
+    background: #d4f6d9;
+}
+.item.clicado .item-nome
+{
+    text-decoration: line-through;
+    color: gray;
 }
 .item-icone
 {
@@ -91,4 +100,8 @@ main
     padding: 10px;
     height: 80px;
     width: 100%;
+}
+.checkmark-circle
+{
+    color: green;
 }
